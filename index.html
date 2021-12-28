@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/favicon.ico" id="favicon">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon-180x180.png">
+    <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="stylesheet" href="css/odometer-theme-default.css" />
+    <script src="js/libs/odometer.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-191433876-5"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-191433876-5');
+    </script>
+        <title>perse</title>
+
+</head>
+
+<body>
+    <!-- メニュー表示 -->
+    <div id="menu">
+        <transition name="navi">
+            <nav class="navi" v-show="navi">
+                <ul class="navi__wrap">
+                    <li class="navi__top"><a href="#top" @click="naviOpen">top</a></li>
+                    <li class="navi__others"><a href="#ourStory" @click="naviOpen">our story</a></li>
+                    <li class="navi__others"><a href="#news" @click="naviOpen">news</a></li>
+                    <li class="navi__others"><a href="#produce" @click="naviOpen">produce</a></li>
+                    <li class="navi__others"><a href="#profile" @click="naviOpen">profile</a></li>
+                    <li class="navi__others"><a href="#contact" @click="naviOpen">contact</a></li>
+                </ul>
+            </nav>
+        </transition>
+        <header class="header">
+            <div class="header__menu">
+                <div class="header__menu__line" @click="naviOpen" :class="{'is-active': active}">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </header>
+    </div>
+    <!-- メニュー表示 -->
+    <div class="content">
+        <main class="content__main" id="top">
+            <div class="content__smlMain fuwa">
+                <div class="content__main--relative">
+                    <div class="content__main--flex">
+                        <p class="content__michiTxt">MICHI</p>
+                        <figure class="content__main--img">
+                            <img src="img/mainVisual-01.png" alt="mainVisual" class="mainVisual" width="100%">
+                            <img src="img/mainVisual-02.png" alt="mainVisual" class="mainVisual" width="100%">
+                            <img src="img/mainVisual-03.png" alt="mainVisual" class="mainVisual" width="100%">
+                        </figure>
+                        <p class="content__yoshikiTxt">YOSHIAKI</p>
+                    </div>
+                    <h1 class="content__logo">Perse</h1>
+                </div>
+            </div>
+            <!-- our story -->
+            <div class="content__ourstory" id="ourStory">
+                <h2 class="content__ttl--ourstory fuwa">our story</h2>
+                <!-- <div class="fuwa2">
+                    <div class="content__ourstory--txtwrap">
+                        <p>&emsp;姉弟として生まれ、<br>&emsp;これまでふたりでひとつのように、<br>支え合いながら<br>&emsp;人生を共にしてきた私たち。<br><br> &emsp;そしてこれからは、<br>私たちと皆さんがもっと近い場所で<br>&emsp;つながれる場所として、<br>ラテン語で「&」という意味を持つ<br> &emsp;「perse / パース」という<br>クリエイティブスタジオをスタートします。</p>
+                    </div>
+                </div> -->
+                <p class="fuwa content__ourstory--frame01"><img src="img/frame1.png" alt="frame01" width="100%"></p>
+                <p class="fuwa content__ourstory--frame02"><img src="img/frame2.png" alt="frame02" width="100%"></p>
+                <p class="fuwa content__ourstory--frame03"><img src="img/frame3.png" alt="frame03" width="100%"></p>
+                <div class="fuwa2 content__ourstory--img01"><img src="img/img_story02.png" alt="ourstory_01" width="100%"></div>
+                <div class="fuwa content__ourstory--img02"><img src="img/img_story01.png" alt="ourstory_02" width="100%"></div>
+                <div class="fuwa content__ourstory--img04"><img src="img/img_story04.png" alt="ourstory_04" width="100%"></div>
+                <div class="sp">
+                    <div class="content__ourstory--img03" id="js-typing0"></div>
+                </div>
+                <div class="sp">
+                    <div class="content__ourstory--img03 typing">
+                        <p class="typing" id="js-typing" style="display: none;"> <span>here we are</span></p>
+                    </div>
+                </div>
+                <div class="fuwa2 content__ourstory--img05"><img src="img/img_story03.png" alt="ourstory_01" width="100%"></div>
+                <div class="logo content__ourstory--img06"><span></span></div>
+            </div>
+            <!-- /.our story -->
+            <!-- news -->
+            <div class="content__news" id="news">
+                <h2 class="content__ttl">news</h2>
+                <ul class="content__news--list">
+                    <li>
+                        <a href="https://s.mxtv.jp/variety/colorful/" target="_blank" rel="noopener">
+                        <div class="content__news--blc">
+                            <img data-src="img/img_news_210725.jpg" alt="" width="100%" class="lazyload">
+                            <img data-src="img/frame_news.png" alt="" width="100%" class="lazyload">
+                            <div class="content__news__icon--wrapper">
+                                <div class="content__news__icon">NEWS</div>
+                            </div>
+                        </div>
+                        <p class="content__news--text">2021.08.08<br>東京MX[日曜はカラフル！！」よしあき・ミチが出演します。</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://thetv.jp/news/detail/1044681/" target="_blank" rel="noopener">
+                        <div class="content__news--blc">
+                            <img data-src="img/img_news_210806.png" alt="" width="100%" class="lazyload">
+                            <img data-src="img/frame_news.png" alt="" width="100%" class="lazyload">
+                            <div class="content__news__icon--wrapper">
+                                <div class="content__news__icon">NEWS</div>
+                            </div>
+                        </div>
+                        <p class="content__news--text">2021.08.06<br>AbemaTV「川柳居酒屋なつみ」にミチが出演します。</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://bs.tbs.co.jp/suimoku/" target="_blank" rel="noopener">
+                        <div class="content__news--blc">
+                            <img data-src="img/img_news_210805.png" alt="" width="100%" class="lazyload">
+                            <img data-src="img/frame_news.png" alt="" width="100%" class="lazyload">
+                            <div class="content__news__icon--wrapper">
+                                <div class="content__news__icon">NEWS</div>
+                            </div>
+                        </div>
+                        <p class="content__news--text">2021.08.05<br>BS TBS 「スイモクちゃんねる」にミチが出演します。</p>
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <div class="content__news--blc">
+                            <img data-src="img/img_news_210802.png" alt="" width="100%" class="lazyload">
+                            <img data-src="img/frame_news.png" alt="" width="100%" class="lazyload">
+                        </div>
+                        <p class="content__news--text">2021.08.02<br>ミチ・よしあきがadidas Originals by HUMAN MADE&reg;2021年秋冬シーズン第三弾のキャンペーンビジュアルに起用されました。</p>
+                    </li>
+                </ul>
+                <p class="content__news--more"><a href="/news.html">more</a></p>
+            </div>
+            <!-- /.news -->
+        </main>
+        <!-- .content__produce -->
+        <div class="content__produce" id="produce">
+            <h2 class="content__ttl">produce</h2>
+            <div class="content__produce__coming">
+                <h2 class="content__ttl">coming soon</h2>
+            </div>
+        </div>
+        <!-- /.content__produce -->
+        <main class="content__main">
+            <!-- .content__profile -->
+            <div class="content__profile" id="profile">
+                <h2 class="content__ttl">profile</h2>
+                <div class="content__profile__wrapper">
+                    <div class="content__profile__blc">
+                        <div class="content__profile__img">
+                            <img data-src="img/img_profile01.png" alt="MICHI" width="100%" class="lazyload">
+                        </div>
+                        <div class="content__profile__txtblc">
+                            <h2 class="content__profile__txtblc--name">MICHI</h2>
+                            <p class="content__profile__txtblc--sub">ミチ</p>
+                            <p class="content__profile__txtblc--txt">1998年生まれ。中国出身。<br> フォロワー総数は100万超！<br> TV、雑誌、ショーなど様々な舞台で活躍する<br> 注目のZ世代のファッションアイコン。<br> 現在sweetモデルとして活躍中。</p>
+                            <div class="content__profile__txtblc--follower">
+                                <p class="content__profile__txtblc--followerTtl">follower</p>
+                                <p class="content__profile__txtblc--followerNum math_list05"><span class="odometer" id="odo01">000</span></p>
+                            </div>
+                            <ul class="content__profile__txtblc--sns">
+                                <li class="content__profile__txtblc--snsTwitter"><a href="https://twitter.com/mi0306chi" target="_blank" rel="noopener">Twitter</a></li>
+                                <li class="content__profile__txtblc--snsTicktok"><a href="https://www.tiktok.com/@mi0306chi36?" target="_blank" rel="noopener">Ticktok</a></li>
+                                <li class="content__profile__txtblc--snsInsta"><a href="https://www.instagram.com/mi0306chi/?hl=ja" target="_blank" rel="noopener">Instagram</a></li>
+                                <li class="content__profile__txtblc--snsXiao"><a href="https://www.xiaohongshu.com/user/profile/608289e6000000000101f0da?xhsshare=CopyLink&appuid=60b64c3e0000000001002652&apptime=1622703881" target="_blank" rel="noopener">Xiao</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="content__profile__blc reverse">
+                        <div class="content__profile__img">
+                            <img data-src="img/img_profile02.png" alt="YOSHIAKI" width="100%" class="lazyload">
+                        </div>
+                        <div class="content__profile__txtblc">
+                            <h2 class="content__profile__txtblc--name">YOSHIAKI</h2>
+                            <p class="content__profile__txtblc--sub">よしあき</p>
+                            <p class="content__profile__txtblc--txt">2000年生まれ。中国出身。<br> 番組出演をきっかけにブレイクし、<br> 初著書のフォトエッセイが予約時点で<br> 重版など話題を呼び、<br> 等身大の若者の代弁者として活躍。</p>
+                            <div class="content__profile__txtblc--follower">
+                                <p class="content__profile__txtblc--followerTtl">follower</p>
+                                <p class="content__profile__txtblc--followerNum math_list06"><span class="odometer" id="odo02">000</span></p>
+                            </div>
+                            <ul class="content__profile__txtblc--sns">
+                                <li class="content__profile__txtblc--snsTwitter"><a href="https://twitter.com/yooshiakiii" target="_blank" rel="noopener">Twitter</a></li>
+                                <li class="content__profile__txtblc--snsTicktok"><a href="https://www.tiktok.com/@yoshiakiiiiiii?" target="_blank" rel="noopener">Ticktok</a></li>
+                                <li class="content__profile__txtblc--snsInsta"><a href="https://www.instagram.com/yooshiakiii/?hl=ja" target="_blank" rel="noopener">Instagram</a></li>
+                                <li class="content__profile__txtblc--snsXiao"><a href="https://www.xiaohongshu.com/user/profile/60a72e620000000001006226?xhsshare=CopyLink&appuid=60b64c3e0000000001002652&apptime=1622703896" target="_blank" rel="noopener">Xiao</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.content__profile -->
+        </main>
+        <!-- .content__followus -->
+        <div class="content__followus">
+            <h2 class="content__ttl">follow us</h2>
+            <div class="content__followus__content">
+                <a href="https://www.youtube.com/channel/UCiJkV6aSJpX9xEJUu00tVlw" class="content__followus__content--youtube" target="_blank" rel="noopener">YOU TUBE</a>
+                <a href="https://m.bilibili.com/video/BV1by4y1378U" class="content__followus__content--bilibili" target="_blank" rel="noopener">bilibili</a>
+            </div>
+        </div>
+        <!-- /.content__followus -->
+        <footer id="contact" class="footer__contact">
+            <h2 class="footer__contact__gif"><img src="img/gif_footer.gif" alt="movie" width="100%">
+                <p class="footer__contact__gif--txt">connect with us</p>
+            </h2>
+            <p class="footer__contact__txt">お仕事のご依頼は<br>こちらからお問い合わせください。</p>
+            <p class="footer__contact__btn"><a href="mailto:perse＠twinplanet.co.jp">CONTACT</a></p>
+            <p class="footer__contact__insta"><a href="https://instagram.com/perseofficial?utm_medium=copy_link">Instagram</a></p>
+            <p class="footer__contact__add">株式会社 TWIN PLANET<br> 〒150-0001<br> 東京都渋谷区神宮前5-46-1<br> TWIN PLANET South BLDG.</p>
+            <small class="copyright">&copy;TWIN PLANET</small>
+            <a href="#top" class="footer__gotop">top</a>
+        </footer>
+    </div>
+    <script>
+        ScrollReveal().reveal('.fuwa', {
+            duration: 2000, // アニメーションの完了にかかる時間
+            viewFactor: 0.5, // 0~1,どれくらい見えたら実行するか
+            reset: false, // 何回もアニメーション表示するか
+            opacity: 0,
+            distance: '50px'
+        });
+        ScrollReveal().reveal('.fuwa2', {
+            duration: 2400, // アニメーションの完了にかかる時間
+            viewFactor: 0.7, // 0~1,どれくらい見えたら実行するか
+            reset: false, // 何回もアニメーション表示するか
+            opacity: 0,
+            distance: '30px'
+        });
+        ScrollReveal().reveal('.logo', {
+            duration: 3000, // アニメーションの完了にかかる時間
+            viewFactor: 0.5, // 0~1,どれくらい見えたら実行するか
+            reset: false, // 何回もアニメーション表示するか
+            opacity: 0,
+            distance: '60px'
+        });
+
+    </script>
+    <script>
+        lazyload();
+    </script>
+    <script>
+        $(function () {
+            // 引き金となる要素を設定
+            var triggerNode = $(".math_list05");
+            var triggerNode2 = $(".math_list06");
+            // 画面スクロール毎に判定を行う
+            $(window).scroll(function () {
+                // 引き金となる要素の位置を取得
+                var triggerNodePosition = $(triggerNode).offset().top;
+                var triggerNodePosition2 = $(triggerNode2).offset().top;
+                // 現在のスクロール位置が引き金要素の位置より下にあれば‥
+                if ($(window).scrollTop() > triggerNodePosition - 600) {
+                    // 動かすJSの指示
+                    $('#odo01').html(1504189);
+                }
+                if ($(window).scrollTop() > triggerNodePosition2 - 600) {
+                    // 動かすJSの指示
+                    $('#odo02').html(950985);
+                }
+            });
+        });
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="js/smoothscroll.min.js"></script><!-- polyfillファイル -->
+    <script src="js/common.js"></script>
+</body>
+
+</html>

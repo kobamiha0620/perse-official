@@ -1,0 +1,762 @@
+@charset "utf-8";
+@import "reset";
+@import "base";
+@import "function";
+
+
+.clearfix:after {
+    content: “”;
+    clear: both;
+    display: block;
+  }
+  * {
+    box-sizing: border-box;
+    outline: none !important;
+  }
+  *::selection {
+    background: #DEE8EE;
+  }
+  html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    font-family: '游明朝','Yu Mincho',YuMincho,'Hiragino Mincho Pro',serif;
+    font-family: 'Cormorant Garamond', serif;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+  }
+
+.content{
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+    background: $BG;
+    min-width: 100vw;
+    width: 100%;
+    min-height: 100vh;
+    &__main{
+        padding: 60px 0 0;
+        width: 100%;
+        margin: 0 auto;
+        &--img{
+            width: 378px;
+            flex-shrink: 1;
+        }
+        &--relative{
+            position: relative;
+            padding: 0 0 50px;
+        }
+        &--flex{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    &__michiTxt{
+        display: inline-block;
+        background: url(../img/img_michi.png) no-repeat;
+        text-indent: -9999px;
+        white-space: nowrap;
+        width: 13px;
+        height: 56px;
+        background-size: 100% auto;
+    }
+    &__yoshikiTxt{
+        display: inline-block;
+        background: url(../img/img_yoshiki.png) no-repeat;
+        text-indent: -9999px;
+        white-space: nowrap;
+        width: 13px;
+        height: 88px;
+        background-size: 100% auto;
+    }
+    &__midMain{
+        width: $PC_W2;
+        margin: 0 auto;
+    }
+
+    &__smlMain{
+        width: $PC_W3;
+        margin: 0 auto;
+    }
+    &__logo{
+        text-indent: -9999px;
+        white-space: nowrap;
+        background: url('../img/logo.png') no-repeat;
+        background-size: 100% auto;
+        width: 360px;
+        height: 105px;
+        position: absolute;
+        bottom: 0;
+        z-index: 91;
+        left: 50%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        line-height: 0;
+    }
+    &__ttl{
+        text-align: center;
+        font-size: 3rem;
+        color: $CR;
+        padding: 0;
+        &--ourstory{
+            text-align: center;
+            font-size: 3rem;
+            color: $CR;
+            padding: 110px 0 0;
+        }
+    }
+
+    &__ourstory{
+        padding: 0 0 120px;
+        position: relative;
+        width: $PC_W1;
+        min-height: 1900px;
+        margin: 60px auto;
+        &--txtwrap{
+            width: 100%;
+            padding: 178px 0 0;
+            justify-content: center;
+            align-items: center;
+            height: 600px;
+            z-index:10;
+            p{
+                text-align: center;
+                color: $CR;
+                line-height: 2.3;
+                font-size: 1.4rem;
+                display: inline-block;
+                width: 360px;
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+        &--frame01{
+            top: 0;
+            width: 360px;
+            height: 600px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            line-height: 0;
+
+        }
+        &--frame02{
+            top: 178px;
+            width: 360px;
+            height: 240px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            line-height: 0;
+        }
+        &--frame03{
+            top: 720px;
+            width: 360px;
+            height: 418px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            line-height: 0;
+        }
+
+
+        &--img01{
+            position: absolute;
+            width: 272px;
+            top: 974px;
+            left: 220px;
+        }
+        &--img02{
+            position: absolute;
+            width: 432px;
+            top: 875px;
+            right: 140px;
+        }
+        &--img03    {
+            display: none;
+        }
+        &--img04{
+            position: absolute;
+            width: 304px;
+            top: 1275px;
+            left: 548px;
+        }
+        &--img05{
+            position: absolute;
+            width: 430px;
+            top: 1540px;
+            left: 140px;
+        }
+        &--img06{
+            position: absolute;
+            width: 306px;
+            top: 1570px;
+            height: 268px;
+            right: 140px;
+            mask-image: url(../img/perse.png);
+            mask-mode: alpha;
+            mask-size: 306px, auto, contain;
+            span{
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+                background:linear-gradient(-45deg, #ce9774,#d8bdb1,#9d7562, #ce9774);/*グラデーションを定義*/
+                background-size: 250% 250%;/*サイズを大きくひきのばす*/
+                animation: bggradient 6s ease infinite;
+            }
+        }
+    }
+
+    &__news{
+        width: 850px;
+        margin: 0 auto 100px;
+        &--list{
+            display: flex;
+            margin: 100px 0 24px;
+            justify-content: space-between;
+            list-style-type: none;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+
+            li{
+                width: 190px;
+                margin: 0 30px 50px 0;
+                img{
+                    position: absolute;
+                    top: 0;
+                    right:0;
+                }
+                &:nth-child(4n)  {
+                    margin-right: 0;
+                }
+                a{
+                    text-decoration: none;
+                    display: block;
+                    &:hover{
+                        opacity: 0.7;
+                    }
+                }
+            }
+        }
+        &--blc{
+            position: relative;
+            height: 226px;
+            margin-bottom: 16px;
+        }
+        &__icon{
+            position: relative;
+            display: block;
+            width: 48px;
+            height: 48px;
+            line-height: 40px;
+            text-align: center;
+            text-decoration: none;
+            overflow: hidden;
+            border-radius: 24px;
+            &::after{
+                content: '';
+                position: absolute;
+                top: -10%;
+                left: -20%;
+                width: 48px;
+                height: 100%;
+                transform: scale(2) rotate(20deg);
+                background-image: linear-gradient(100deg, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, .5) 100%, rgba(255, 255, 255, 0) 0%);
+                /* アニメーション */
+                animation-name: shiny;
+                animation-duration: 3s;
+                animation-timing-function: ease-in-out;
+                animation-iteration-count: infinite;
+            }
+            &--wrapper{
+                background: url('../img/icon_news.png') no-repeat 0 0;
+                background-size: 100% auto;
+                white-space: nowrap;
+                text-indent: -9999px;
+                display: inline-block;
+                width: 48px;
+                height: 48px;
+                top: -13px;
+                right: -5px;
+                position: absolute;
+            }
+
+
+        }
+        &--text{
+            font-size: 1.4rem;
+            line-height: 1.8;
+            color: #303030;
+            font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+        }
+        &--more{
+            text-align: center;
+            a{
+                display: inline-block;
+                text-indent: -9999px;
+                white-space: nowrap;
+                width: 108px;
+                height:  108px;
+                background: url(../img/btn_news.png) no-repeat;
+                background-size: 100% auto;
+                &:hover{
+                    opacity: 0.7;
+                }
+            }
+
+        }
+    }
+    &__produce{
+        padding: 80px 0 0;
+        margin: 0;
+        &__coming{
+            padding: 220px 0;
+            text-align: center;
+            margin: 100px 0 0;
+            background: $PK;
+            width: 100vw;
+        }
+    }
+    &__profile{
+        padding: 80px 0 0;
+        width: $PC_W1;
+        margin: 0 auto;
+        &__blc{
+            display: flex;
+            align-items: center;
+            &.reverse{
+                flex-flow: row-reverse;
+            }
+        }
+        &__wrapper{
+            padding: 80px 0 120px;
+        }
+        &__img{
+            width: 50%;
+            flex-shrink: 1;
+        }
+        &__txtblc{
+            width: 50%;
+            flex-shrink: 1;
+            text-align: center;
+            &--name{
+                font-weight: bold;
+                font-size: 8rem;
+                color: $CR;
+                margin: 0 0 48px;
+            }
+            &--sub{
+                font-size: 1.6rem;
+                font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+                font-weight: bold;
+                color: #303030;
+                margin-bottom: 15px;
+            }
+            &--txt{
+                font-size: 1.4rem;
+                font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+                color: #303030;
+                line-height: 2.8;
+                margin-bottom: 40px;
+            }
+            &--follower{
+                display: flex;
+                text-align: center;
+                justify-content: center;
+                align-items: flex-end;
+            }
+            &--followerTtl{
+                color: #303030;
+                font-size: 2.2rem;
+                padding: 0 15px 0px 0;
+            }
+            &--followerNum{
+                color:#bc9e80;
+                font-size: 8.4rem;
+                font-weight: bold;
+            }
+            &--sns{
+                display: flex;
+                list-style: none;
+                justify-content: space-between;
+                width: 284px;
+                margin: 44px auto 0;
+                height: 60px;
+                li{
+                    width: 60px;
+                    height: 60px;
+                    a{
+                        width: 60px;
+                        height: 60px;
+                        display: block;
+                        text-indent: -9999px;
+                        white-space: nowrap;
+                        &:hover{
+                            opacity: 0.7;
+                        }
+                    }
+                }
+            }
+            &--snsTwitter{
+               a{
+                   background: url('../img/icon_twitter.png') no-repeat 0 0;
+                   background-size: 100% auto;
+               }
+            }
+            &--snsTicktok{
+                a{
+                    background: url('../img/icon_ticktok.png') no-repeat 0 0;
+                    background-size: 100% auto;
+
+                }
+             }
+             &--snsInsta{
+                a{
+                    background: url('../img/icon_insta.png') no-repeat 0 0;
+                    background-size: 100% auto;
+
+                }
+             }
+             &--snsXiao{
+                a{
+                    background: url('../img/icon_xiao.png') no-repeat 0 0;
+                    background-size: 100% auto;
+
+                }
+             }
+        }
+    }
+    &__followus{
+        background: $PK;
+        width: 100%;
+        padding: 60px 0 100px;
+        &__content{
+            padding: 45px 0 0;
+            display: flex;
+            margin: 0 auto;
+            justify-content: space-between;
+            width: 440px;
+            height: 70px;;
+            a{
+                display: block;
+                width: 210px;
+                height: 70px;
+                text-indent: -9999px;
+                white-space: nowrap;
+                &:hover{
+                    opacity: 0.7;
+                }
+            }
+            &--youtube{
+                background: url('../img/followus_youtube.png') no-repeat 0 0;
+                background-size: 100% auto;
+            }
+            &--bilibili{
+                background: url('../img/followus_bilibili.png') no-repeat 0 0;
+                background-size: 100% auto;
+            }
+        }
+    }
+}
+
+//キラッとボタン
+@keyframes shiny {
+    0% { left: -20%; }
+    10% { left: 120%; }
+    100% { left: 120%; }
+}
+
+//グラデーション
+@keyframes bggradient{
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+/* SP 画面サイズが1160px以下 */
+@media screen and (max-width: $PC_W1) {
+    .content{
+        &__ourstory{
+            width: 100%;
+
+        }
+    }
+}
+
+/* SP 画面サイズが768px以下 */
+@media screen and (max-width: $BP) {
+    .content{
+        padding: 10px 0 0;
+        &__main{
+            width: 100%;
+            &--img{
+                width: 80vw;
+                flex-shrink: 1;
+            }
+            &--flex{
+                padding: 0 3.7%;
+            }
+            &--relative{
+                padding: 0 0 13.33%;
+            }
+        }
+        &__smlMain{
+            width: 100%;
+            margin: 0 auto;
+        }
+        &__midMain{
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        &__michiTxt{
+            width: 10px;
+            height: 45px;
+        }
+        &__yoshikiTxt{
+            width: 10px;
+            height: 70px;
+        }
+        &__logo{
+            padding-top: 23.3%;
+            width: 80vw;
+            height: auto;
+        }
+        &__ttl{
+            font-size: 2.5rem;
+            padding: 0;
+            &--ourstory{
+                font-size: 2.5rem;
+                padding: 0;
+                padding: 100px 0 0;
+            }
+        }
+        &__txt{
+            font-size: 1.15rem;
+        }
+        &__ourstory{
+            padding: 0 0 24.4vw;
+            width: 100%;
+            min-height: 430vw;
+            margin: 100px 0 0;
+
+    
+            // }
+            // &--frame02{
+            //     top: 178px;
+            //     width: 360px;
+            //     height: 240px;
+            //     position: absolute;
+            //     left: 50%;
+            //     transform: translateX(-50%);
+            //     -webkit-transform: translateX(-50%);
+            //     -ms-transform: translateX(-50%);
+            //     line-height: 0;
+            // }
+            // &--frame03{
+            //     top: 720px;
+            //     width: 360px;
+            //     height: 418px;
+            //     position: absolute;
+            //     left: 50%;
+            //     transform: translateX(-50%);
+            //     -webkit-transform: translateX(-50%);
+            //     -ms-transform: translateX(-50%);
+            //     line-height: 0;
+            // }
+            &--frame01{
+                top: 0;
+                width: 0px;
+                width: 80vw;
+
+            }
+            &--frame02{
+                width: 80vw;
+                top: 40vw;
+            }
+            &--frame03{
+                width: 80vw;
+                top: 160vw;
+            }
+            &--img01{
+                position: absolute;
+                width: 45.3%;
+                top: 226.9vw;
+                left: 4vw;
+            }
+            &--img02{
+                position: absolute;
+                width: 72%;
+                top: 191.2vw;
+                right: 0;
+            }
+            &--img03{
+                position: absolute;
+                top: 265vw;
+                display: inline-block;
+                right: 10vw;
+            }
+            &--img04{
+                position: absolute;
+                width: 50.6%;
+                top: 340vw;
+                left: auto;
+                right: 0;
+            }
+            &--img05{
+                position: absolute;
+                width: 72%;
+                top: 296vw;
+                left: 13.3%;
+            }
+            &--img06{
+                position: absolute;
+                width: 50.8%;
+                top: 360vw;
+                left: 8%;
+                mask-size: 100%, auto, contain;
+                height: 44.2vw;
+            }
+        }
+        &__news{
+            width: 88%;
+            margin: 0 auto;
+            &--list{
+                flex-wrap: wrap;
+                margin: 45px 0 0;
+                justify-content: space-between;
+                li{
+                    margin-right: 0;
+                    width: 48%;
+                    flex-shrink: 1;
+                    margin-bottom: 10vw;
+                }
+            }
+            &--blc{
+                height: 50.6vw;
+                margin-bottom: 10px;
+            }
+            &__icon{
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+                border-radius: 20px;
+                &::after{
+                    width: 40px;
+                    height: 100%;
+                }
+                &--wrapper{
+                    background: url('../img/icon_news.png') no-repeat 0 0;
+                    width: 40px;
+                    height: 40px;
+                    background-size: 100% auto;
+                    top: -10px;
+                    right: -3px;
+                }
+            }
+            &--text{
+                font-size: 1.2rem;
+            }
+            &--more{
+                a{
+                    width: 90px;
+                    height:  90px;
+                }
+    
+            }
+        }
+        &__produce{
+            padding: 100px 0 0;
+            margin: 0;
+            &__coming{
+                padding: 110px 0;
+            }
+        }
+        &__profile{
+            padding: 90px 0 0;
+            width: 100%;
+            margin: 0;
+            &__blc{
+                display: block;
+            }
+            &__wrapper{
+                padding: 90px 0 0;
+            }
+            &__img{
+                width: 100%;
+            }
+            &__txtblc{
+                width: 100%;
+                text-align: center;
+                &--name{
+                    font-size: 6.5rem;
+                    margin: 50px 0 30px;
+                }
+                &--sub{
+                    font-size: 1.3rem;
+                    margin-bottom: 8px;
+                }
+                &--txt{
+                    font-size: 1.2rem;
+                    margin-bottom: 20px;
+                    line-height: 2;
+                }
+                &--follower{
+                    margin-bottom: 30px;
+                }
+                &--followerTtl{
+                    font-size: 1.8rem;
+                    padding: 0 10px 10px 0;
+                }
+                &--followerNum{
+                    font-size: 7rem;
+                }
+                &--sns{
+                    width: 235px;
+                    margin: 0 auto 50px;
+                    height: 50px;
+                    li{
+                        width: 50px;
+                        height: 50px;
+                        a{
+                            width: 50px;
+                            height: 50px;
+                        }
+                    }
+                }
+            }
+        }
+        &__followus{
+            padding: 35px 0 45px;
+            &__content{
+                padding: 25px 0 0;
+                width: 315px;
+                a{
+                    width: 150px;
+                    height: 50px;
+                }
+            }
+        }
+    }
+
+}
+/* PC 画面サイズが769px以上 */
+@media screen and (min-width: $BP+1) {
+    .content{
+
+    }
+}
+
