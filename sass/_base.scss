@@ -1,0 +1,222 @@
+$BP: 768px;
+$BP_PC: 1080px;
+
+
+//COLOR
+$BG: #f4f3ea; //背景色
+$CR: #9b725e; //文字色
+$BC: #ede1d5; //中間色
+$DC: #dbdad2; //disable色
+$PK: #ede1d5;
+
+//PC幅
+$PC_W1: 1160px;
+$PC_W2: 880px;
+$PC_W3: 660px;
+
+html { scroll-behavior: smooth;}
+
+
+//footer
+.footer{
+    &__contact{
+        position: relative;
+        padding:  240px 0 150px;
+        background: url('../img/bg_footer.png') 0 0 no-repeat;
+        background-size: 100% 100%;
+        &__gif{
+            position: relative;
+            margin: 0 auto 118px;
+            text-align: center;
+            height: 400px;
+            padding: 40px 0;
+            width: 391px;
+            img{
+                width: 320px;
+            }
+            &--txt{
+                white-space: nowrap;
+                text-indent: -9999px;
+                background: url('../img/footer_txt.png') no-repeat 0 0;
+                background-size: 100% auto;
+                display: block;
+                width: 391px;
+                height: 400px;
+                margin: 0 auto;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+        &__txt{
+            font-size: 1.8rem;
+            line-height: 2;
+            text-align: center;
+            color: #303030;
+            font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+            margin: 0 0 48px;
+        }
+        &__btn{
+            text-align: center;
+            a{
+                background: url('../img/btn_contact.png') no-repeat 0 0;
+                background-size: 100% auto;
+                display: inline-block;
+                white-space: nowrap;
+                text-indent: -9999px;
+                width: 336px;
+                height: 70px;
+                margin: 0 0 60px;
+                &:hover{
+                    opacity: 0.7;
+                }
+            }
+        }
+        &__insta{
+            text-align: center;
+            margin: 0 0 110px;
+            a{
+                background: url('../img/icon_insta.png') no-repeat 0 0;
+                background-size: 100% auto;
+                display: block;
+                width: 70px;
+                height: 70px;
+                background-size: 100% auto;
+                display: inline-block;
+                white-space: nowrap;
+                text-indent: -9999px;
+                &:hover{
+                    opacity: 0.7;
+                }
+            }
+        }
+        &__add{
+            color: #303030;
+            font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+            text-align: center;
+            font-size: 1.6rem;
+            line-height: 1.5;
+            margin: 0 auto 22px;
+        }
+    }
+    &__gotop{
+        background: url('../img/gotop.png') no-repeat 0 0;
+        background-size: 100% auto;
+        display: block;
+        width: 140px;
+        height: 105px;
+        background-size: 100% auto;
+        display: inline-block;
+        white-space: nowrap;
+        text-indent: -9999px;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        &:hover{
+            opacity: 0.7;
+        }
+    }
+}
+.copyright{
+    text-align: center;
+    display: block;
+    color: #303030;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+    font-size: 1.68rem;
+}
+.math_list05{
+    font-family: '游明朝','Yu Mincho',YuMincho,'Hiragino Mincho Pro',serif;
+    font-family: 'Cormorant Garamond', serif!important;
+}
+.odometer-value, .odometer-formatting-mark{
+    font-family: '游明朝','Yu Mincho',YuMincho,'Hiragino Mincho Pro',serif;
+    font-family: 'Cormorant Garamond', serif!important;
+    font-weight: bold;
+    text-align: left;
+    margin: 0 -3px 0 0;
+
+
+}
+.odometer.odometer-auto-theme .odometer-value, .odometer.odometer-theme-default .odometer-value {
+    text-align: left;
+  } 
+.odometer-digit{
+    display: inline-block;
+    margin: 0 -5px 0 0;
+}
+/* SP 画面サイズが768px以下 */
+@media screen and (max-width: $BP) {
+
+    .footer{
+        &__contact{
+            padding: 30vw 0 32vw;
+            background-size: auto 100%;
+            background-position: center bottom;
+            &__gif{
+                margin: 0 auto 13.6vw;
+                height: 282px;
+                padding: 32px 0;
+                width: 272px;
+                img{
+                    width: 220px;
+                }
+                &--txt{
+                    width: 272px;
+                    height: 282px;
+                    top: 0;
+                }
+            }
+            &__txt{
+                font-size: 1.3rem;
+                line-height: 1.6;
+                margin: 0 0 8vw;
+            }
+            &__btn{
+                a{
+                    width: 64%;
+                    height: 13.33vw;
+                    margin: 0 0 65px;
+                }
+            }
+            &__insta{
+                text-align: center;
+                margin: 0 0 72px;
+                a{
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+            &__add{
+                font-size: 1.2rem;
+                line-height: 1.5;
+                margin: 0 auto 22px;
+            }
+        }
+        &__gotop{
+            width: 100px;
+            height: 80px;
+        }
+    }
+    .copyright{
+        font-size: 1.2rem;
+    }
+    .pc{
+        display: none;
+    }
+    .sp{
+        display: block;
+    }
+}
+
+/* PC 画面サイズが769px以上 */
+@media screen and (min-width: $BP+1) {
+    .pc{
+        display: block;
+    }
+    .sp{
+        display: none;
+    }
+}

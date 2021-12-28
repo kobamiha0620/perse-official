@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
+        <link rel="icon" href="img/favicon.ico" id="favicon">
+        <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon-180x180.png">
+        <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.min.js"></script>
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <link rel="stylesheet" href="css/odometer-theme-default.css" />
+        <script src="js/libs/odometer.min.js"></script>
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <link rel="stylesheet" href="css/style.css">
+
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-191433876-5"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-191433876-5');
+        </script>
+        <title>perse</title>
+</head>
+
+<body>
+    <!-- メニュー表示 -->
+    <div id="menu">
+
+        <transition name="navi">
+            <nav class="navi" v-show="navi">
+                <ul class="navi__wrap">
+                    <li class="navi__top"><a href="../index.html#top" @click="naviOpen">top</a></li>
+                    <li class="navi__others"><a href="../index.html#ourStory" @click="naviOpen">our story</a></li>
+                    <li class="navi__others"><a href="../news.html" @click="naviOpen">news</a></li>
+                    <li class="navi__others"><a href="../index.html#produce" @click="naviOpen">produce</a></li>
+                    <li class="navi__others"><a href="../index.html#profile" @click="naviOpen">profile</a></li>
+                    <li class="navi__others"><a href="../index.html#contact" @click="naviOpen">contact</a></li>
+                </ul>
+            </nav>
+        </transition>
+        <header class="header">
+            <div class="header__menu">
+                <div class="header__menu__line" @click="naviOpen" :class="{'is-active': active}">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </header>
+    </div>
+    <!-- メニュー表示 -->
+
+
+    <div class="content">
+
+            <!-- news -->
+            <div class="content__news fuwa" id="news" style="padding-top: 50px;">
+                <h2 class="content__ttl">news</h2>
+                <ul class="content__news--list">
+                    <li>
+                        <a href="https://s.mxtv.jp/variety/colorful/" target="_blank" rel="noopener">
+                        <div class="content__news--blc">
+                            <img data-src="img/img_news_210725.jpg" alt="" width="100%" class="lazyload">
+                            <img data-src="img/frame_news.png" alt="" width="100%" class="lazyload">
+                            <div class="content__news__icon--wrapper">
+                                <div class="content__news__icon">NEWS</div>
+                            </div>
+                        </div>
+                        <p class="content__news--text">2021.08.08<br>東京MX[日曜はカラフル！！」よしあき・ミチが出演します。</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://thetv.jp/news/detail/1044681/" target="_blank" rel="noopener">
+                        <div class="content__news--blc">
+                            <img data-src="img/img_news_210806.png" alt="" width="100%" class="lazyload">
+                            <img data-src="img/frame_news.png" alt="" width="100%" class="lazyload">
+                            <div class="content__news__icon--wrapper">
+                                <div class="content__news__icon">NEWS</div>
+                            </div>
+                        </div>
+                        <p class="content__news--text">2021.08.06<br>AbemaTV「川柳居酒屋なつみ」にミチが出演します。</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://bs.tbs.co.jp/suimoku/" target="_blank" rel="noopener">
+                        <div class="content__news--blc">
+                            <img data-src="img/img_news_210805.png" alt="" width="100%" class="lazyload">
+                            <img data-src="img/frame_news.png" alt="" width="100%" class="lazyload">
+                            <div class="content__news__icon--wrapper">
+                                <div class="content__news__icon">NEWS</div>
+                            </div>
+                        </div>
+                        <p class="content__news--text">2021.08.05<br>BS TBS 「スイモクちゃんねる」にミチが出演します。</p>
+                        </a>
+                    </li>
+                    <li>
+                        <div class="content__news--blc">
+                            <img data-src="img/img_news_210802.png" alt="" width="100%" class="lazyload">
+                            <img data-src="img/frame_news.png" alt="" width="100%" class="lazyload">
+                        </div>
+                        <p class="content__news--text">2021.08.02<br>ミチ・よしあきがadidas Originals by HUMAN MADE&reg;2021年秋冬シーズン第三弾のキャンペーンビジュアルに起用されました。</p>
+                    </li>
+                    <li>
+                        <div class="content__news--blc">
+                            <img data-src="img/img_news_210801a.png" alt="" width="100%" class="lazyload">
+                            <img data-src="img/frame_news.png" alt="" width="100%" class="lazyload">
+                        </div>
+                        <p class="content__news--text">2021.08.01<br>ファッション通販サイト「GRL」のイメージモデルにミチが起用されました。</p>
+                    </li>
+                    <li>
+                        <div class="content__news--blc">
+                            <img data-src="img/img_news_210801b.png" alt="" width="100%" class="lazyload">
+                            <img data-src="img/frame_news.png" alt="" width="100%" class="lazyload">
+                        </div>
+                        <p class="content__news--text">2021.08.01<br>AbemaTV「オオカミちゃんには騙されない 同窓会スペシャル」ミチが出演してます。</p>
+                    </li>
+                    <li>
+                        <div class="content__news--blc">
+                            <img data-src="img/img_news_210801c.png" alt="" width="100%" class="lazyload">
+                            <img data-src="img/frame_news.png" alt="" width="100%" class="lazyload">
+                        </div>
+                        <p class="content__news--text">2021.08.01<br>mini9月号（宝島社）よしあき・ミチが登場！</p>
+                    </li>
+                    <li>
+                        <div class="content__news--blc">
+                            <img data-src="img/img_news_210725.jpg" alt="" width="100%" class="lazyload">
+                            <img data-src="img/frame_news.png" alt="" width="100%" class="lazyload">
+
+                        </div>
+                        <p class="content__news--text">2021.07.25<br>東京MX「日曜はカラフル！！！」によしあきが出演します。</p>
+                    </li>
+                    <li>
+                        <div class="content__news--blc">
+                            <img data-src="img/img_news_210722.jpg" alt="" width="100%" class="lazyload">
+                            <img data-src="img/frame_news.png" alt="" width="100%" class="lazyload">
+
+                        </div>
+                        <p class="content__news--text">2021.07.22<br>フジテレビ「キスマイ超BUSAIKU！？」ミチが出演します。</p>
+                    </li>
+                    <li>
+                        <div class="content__news--blc">
+                            <img data-src="img/img_news_210712.png" alt="" width="100%" class="lazyload">
+                            <img data-src="img/frame_news.png" alt="" width="100%" class="lazyload">
+
+                        </div>
+                        <p class="content__news--text">2021.07.12<br> ミチがレギュラーモデルを務める「Sweet」8月号が発売中！</p>
+                    </li>
+                    <li>
+                        <div class="content__news--blc">
+                            <img data-src="img/img_news_210625.png" alt="" width="100%" class="lazyload">
+                            <img data-src="img/frame_news.png" alt="" width="100%" class="lazyload">
+
+                        </div>
+                        <p class="content__news--text">2021.06.25<br> よしミチ×LILY ANNAコラボ企画「LILY ANNA WEB MAGAZINE」の連載がスタートしました。</p>
+                    </li>
+                    <li>
+                        <div class="content__news--blc">
+                            <img data-src="img/img_news01.png" alt="" width="100%" class="lazyload">
+                            <img data-src="img/frame_news.png" alt="" width="100%" class="lazyload">
+                        </div>
+                        <p class="content__news--text">2021.06.01<br>中国のSNSプラットフォーム「小紅書（RED）」のアカウントを開設致しました。</p>
+                    </li>
+                    <li>
+                        <div class="content__news--blc">
+                            <img data-src="img/img_news02.png" alt="" width="100%" class="lazyload">
+                            <img data-src="img/frame_news.png" alt="" width="100%" class="lazyload">
+                        </div>
+                        <p class="content__news--text">2021.06.01<br>
+                            中国の動画プラットフォーム「bilibili」のアカウントを開設致しました。</p>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.news -->
+        </main>
+
+    </div>
+</div>
+
+    <script>
+        ScrollReveal().reveal('.fuwa', {
+            duration: 1000, // アニメーションの完了にかかる時間
+            viewFactor: 0.5, // 0~1,どれくらい見えたら実行するか
+            reset: false,   // 何回もアニメーション表示するか
+            opacity: 0.7,
+            distance: '50px'
+            });
+            ScrollReveal().reveal('.fuwa2', {
+            duration: 1200, // アニメーションの完了にかかる時間
+            viewFactor: 0.7, // 0~1,どれくらい見えたら実行するか
+            reset: false,   // 何回もアニメーション表示するか
+            opacity: 0.7,
+            distance: '30px'
+
+            });
+            ScrollReveal().reveal('.logo', {
+            duration: 5000, // アニメーションの完了にかかる時間
+            viewFactor: 0.9, // 0~1,どれくらい見えたら実行するか
+            reset: false,   // 何回もアニメーション表示するか
+            opacity: 0,
+            distance: '60px'
+
+            });
+    </script>
+    <script>
+        lazyload();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="js/smoothscroll.min.js"></script><!-- polyfillファイル -->
+    <script src="js/common.js"></script>
+</body>
+
+</html>
+
