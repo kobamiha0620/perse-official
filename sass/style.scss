@@ -27,17 +27,19 @@
   }
 
 .content{
-    overflow: scroll;
-    -webkit-overflow-scrolling: touch;
-    overflow-scrolling: touch;
-    background: $BG;
+
     min-width: 100vw;
     width: 100%;
     min-height: 100vh;
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+    background: $BG;
+    width: 100%;
     &__main{
         padding: 60px 0 0;
         width: 100%;
         margin: 0 auto;
+
         &--img{
             width: 378px;
             flex-shrink: 1;
@@ -74,10 +76,10 @@
         width: $PC_W2;
         margin: 0 auto;
     }
-
     &__smlMain{
         width: $PC_W3;
         margin: 0 auto;
+        padding-top: 60px;
     }
     &__logo{
         text-indent: -9999px;
@@ -325,10 +327,167 @@
             width: 100vw;
         }
     }
+    &__pblc{
+        padding-top: 90px;
+        &--shop{
+            position: absolute;
+            right: -80px;
+            bottom: -30px;
+            width: 108px;
+            height: 108px;
+            a{
+                display: block;
+                text-indent: -9999px;
+                white-space: nowrap;
+                width: 108px;
+                height: 108px;
+                background: url('../img/icon_linktoshop.png');
+                background-size: 100% auto;
+                &:hover{
+                    opacity: 0.8;
+                }
+            }
+
+        }
+        &--subttl{
+            font-size: 1.3rem;
+            text-align: center;
+            color: #303030;
+
+        }
+        &--txt{
+            font-size: 1.4rem;
+            text-align: center;
+            color: #303030;
+            font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+        }
+        &--jewelry{
+            background: url('../img/txt_jewery.png');
+            white-space: nowrap;
+            text-indent: -9999px;
+            background-size: 100% auto;
+            position: absolute;
+            left: 0;
+            top: 254px;
+            width: 19px;
+            height: 52px;
+
+        }
+        &--beauty{
+            background: url('../img/txt_beauty.png');
+            white-space: nowrap;
+            text-indent: -9999px;
+            position: absolute;
+            left: 0;
+            top: 256px;
+            width: 18px;
+            height: 47px;
+            background-size: 100% auto;
+        }
+        &--lipbalm{
+            background: url('../img/txt_lipbalm.png');
+            white-space: nowrap;
+            text-indent: -9999px;
+            position: absolute;
+            background-size: 100% auto;
+            left: 0;
+            top: 251px;
+            width: 18px;
+            height: 59px;
+
+        }
+        &--inner{
+            width: 630px;
+            margin: 0 auto;
+            padding: 40px 115px 50px;
+            position: relative;
+            &Img{
+                width: 100%;
+                position: relative;
+                margin: 0;
+                height: 480px;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+        &--lang{
+            background: $PK;
+            padding: 60px 0 70px;
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            z-index: 0;
+            &ttl{
+                text-align: center;
+                font-size: 9rem;
+                color: $CR;
+                line-height: 0.67;
+                margin: 0 0 25px;         
+            }
+        }
+        &--velvet{
+            padding: 60px 0 70px;
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            background: $BG;
+            z-index: 0;
+
+            &ttl{
+                text-align: center;
+                font-size: 6rem;
+                color: $CR;
+                line-height: 0.8;
+                margin: 0 0 7px;
+            }
+            &subttl{
+                font-weight: 600;
+                text-align: center;
+                font-size: 1.8rem;
+                color: $CR;
+                line-height: 0.67;
+                margin: 0 0 13px;
+            }
+
+        }
+        &--perse{
+            padding: 60px 0 70px;
+            background: $PK;
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            z-index:0;
+
+            &ttl{
+                text-align: center;
+                font-size: 12rem;
+                color: $CR;
+                line-height: 0.2;
+                margin: 0 0 40px;
+            }
+            &subttl{
+                font-weight: 600;
+                text-align: center;
+                font-size: 1.8rem;
+                color: $CR;
+                line-height: 0.67;
+                margin: 0 0 13px;
+            }
+
+        }
+    }
     &__profile{
-        padding: 80px 0 0;
+        background: $BG;
+        padding: 80px 0 60px;
         width: $PC_W1;
         margin: 0 auto;
+        &--wrap{
+            width: 100vw;
+            background: $BG;
+            position: relative;
+
+        }
         &__blc{
             display: flex;
             align-items: center;
@@ -436,15 +595,24 @@
     }
     &__followus{
         background: $PK;
-        width: 100%;
         padding: 60px 0 100px;
+        position: relative;
         &__content{
-            padding: 45px 0 0;
-            display: flex;
-            margin: 0 auto;
+            margin: 45px auto 0;
+            // overflow: hidden;
+            // margin: 0 auto;
             justify-content: space-between;
             width: 440px;
-            height: 70px;;
+            height: 70px;
+            li{
+                list-style: none;
+                float: left;
+                height: 70px;
+
+                &:last-child{
+                    float: right;
+                }
+            }
             a{
                 display: block;
                 width: 210px;
@@ -458,15 +626,68 @@
             &--youtube{
                 background: url('../img/followus_youtube.png') no-repeat 0 0;
                 background-size: 100% auto;
+                display: block;
+                height: 70px;
             }
             &--bilibili{
                 background: url('../img/followus_bilibili.png') no-repeat 0 0;
                 background-size: 100% auto;
+
             }
         }
     }
 }
 
+.pagination{
+    width: 10px;
+    height: 54px;
+    display: block;
+    position: relative;
+    &--wrapper{
+
+    }
+    li{
+        list-style: none;
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        &:first-child{
+            top:0;
+            right:0;
+        }
+        &:last-child{
+            bottom:0;
+            right: 0;
+        }
+        &:nth-child(2){
+            top: 22px;
+            right: 0;
+        }
+        a{
+            display: block;
+            text-indent: -9999px;
+            white-space: nowrap;
+            background: #ddcbbd;
+            border-radius: 10px;
+            width: 100%;
+            height: 10px;
+            &.active{
+                background: #9b725e;
+            }
+        }
+    }
+}
+.sticky {
+  position: -webkit-sticky; /* safari対応 */
+  position: sticky;
+  top: 0;
+}
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+ }
+ 
 //キラッとボタン
 @keyframes shiny {
     0% { left: -20%; }
@@ -501,7 +722,6 @@
     .content{
         padding: 10px 0 0;
         &__main{
-            width: 100%;
             &--img{
                 width: 80vw;
                 flex-shrink: 1;
@@ -678,6 +898,102 @@
     
             }
         }
+        &__pblc{
+            padding-top: 12.5%;
+            &--shop{
+                position: relative;
+                text-align: center;
+                width: 100%;
+                height: 23.7vw;
+                right: 0;
+                bottom: 0;
+                a{
+                    width: 23.7vw;
+                    height: 23.5vw;
+                    display: inline-block;
+                }
+
+            }
+            &--subttl{
+                font-size: 1.1rem;    
+            }
+            &--txt{
+                font-size: 1.2rem;
+                margin: 0 auto 5%;
+            }
+            &--jewelry{
+                position: relative;
+                width: 15px;
+                height: 42px;
+                left: 0;
+                top: 0;
+            }
+            &--beauty{
+                position: relative;
+                width: 15px;
+                height: 39px;
+                left: 0;
+                top: 0;
+            }
+            &--lipbalm{
+                position: relative;
+                width: 15px;
+                height: 50px;
+                left: 0;
+                top: 0;
+            }
+            &--inner{
+                width: 100%;
+                margin: 0 auto;
+                padding: 5% 7% 5%;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                &Img{
+                    width: 66.66vw;
+                    margin: 0;
+                    height: 100%;
+                }
+            }
+            &--lang{
+                padding: 12% 0;
+
+                &ttl{
+                    font-size: 7rem;
+                    margin: 0 0 16px;         
+                }
+            }
+            &--velvet{
+                padding: 12% 0;
+                &ttl{
+                    font-size: 4rem;
+                    line-height: 0.8;
+                    margin: 0 0 10px;
+                }
+                &subttl{
+                    font-size: 1.5rem;
+                    margin: 0 0 16px;
+                }
+    
+            }
+            &--perse{
+                padding: 12% 0;
+
+    
+                &ttl{
+                    font-size: 10rem;
+                    line-height: 0.2;
+                    margin: 0 0 34px;
+                }
+                &subttl{
+                    font-size: 1.5rem;
+                    margin: 0 0 16px;
+                }
+    
+            }
+        }
         &__produce{
             padding: 100px 0 0;
             margin: 0;
@@ -701,6 +1017,7 @@
             &__txtblc{
                 width: 100%;
                 text-align: center;
+                padding-bottom: 50px;
                 &--name{
                     font-size: 6.5rem;
                     margin: 50px 0 30px;
@@ -726,7 +1043,7 @@
                 }
                 &--sns{
                     width: 235px;
-                    margin: 0 auto 50px;
+                    padding: 0 auto;
                     height: 50px;
                     li{
                         width: 50px;
@@ -741,9 +1058,18 @@
         }
         &__followus{
             padding: 35px 0 45px;
+            font-size: 0;                line-height: 0;
+            h2{
+                line-height: 1;
+            }
+            li{
+                height: auto;
+            }
             &__content{
-                padding: 25px 0 0;
+                margin: 25px auto 0;
                 width: 315px;
+                line-height: 0;
+                height: auto;
                 a{
                     width: 150px;
                     height: 50px;
@@ -751,12 +1077,24 @@
             }
         }
     }
-
+    .pagination--wrapper{
+        right: 0;
+        top: 0;
+        display: inline-block;
+    }
 }
 /* PC 画面サイズが769px以上 */
 @media screen and (min-width: $BP+1) {
     .content{
 
+    }
+    body{
+    }
+    .pagination--wrapper{
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 253px;
     }
 }
 
