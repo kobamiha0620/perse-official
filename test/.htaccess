@@ -1,0 +1,5 @@
+AuthType Basic
+AuthName "perse"
+AuthUserFile "/home/users/2/main.jp-14960d04ca2b36cd/web/test/.htpasswd"
+require valid-user
+
